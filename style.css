@@ -1,145 +1,171 @@
-/* --- General Reset --- */
+/* ===== Global Reset ===== */
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #ffe8d6, #ffecd2);
+  background: linear-gradient(135deg, #090979, #020024, #00d4ff);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 20px;
+  color: #fff;
 }
 
-.container {
-  background: #ffffff;
-  border-radius: 20px;
-  max-width: 450px;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 25px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== Card ===== */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
   font-size: 1.8rem;
-  margin-bottom: 5px;
-  color: #333333;
+  background: linear-gradient(90deg, #00eaff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 0.95rem;
-  color: #555555;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #cfd8dc;
+  margin-bottom: 25px;
 }
 
-/* --- Sections --- */
-.section {
-  margin-bottom: 20px;
-}
-
-/* --- Upload --- */
+/* ===== Upload Section ===== */
 .upload-label {
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
-  padding: 12px 20px;
-  border-radius: 10px;
+  padding: 12px 25px;
+  border-radius: 12px;
   cursor: pointer;
-  display: inline-block;
-  transition: background 0.3s ease;
   font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
 }
 
 .upload-label:hover {
-  background: linear-gradient(90deg, #ff5a36, #ffb37b);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.8);
 }
 
-/* --- Preview --- */
+input[type="file"] {
+  display: none;
+}
+
+/* ===== Preview ===== */
 .preview-section img {
+  margin-top: 20px;
   max-width: 100%;
   max-height: 250px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
-/* --- Controls & Effects --- */
-.controls, .effects {
+/* ===== Controls ===== */
+.controls {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 10px;
 }
 
 .control {
   flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
+  text-align: left;
 }
 
-.control input[type="number"], .control input[type="range"] {
-  padding: 6px;
+.control label {
+  font-size: 0.9rem;
+  color: #cfd8dc;
+}
+
+.control input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: none;
   border-radius: 8px;
-  border: 1px solid #ddd;
   outline: none;
-  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
 }
 
-.checkbox {
-  flex: 1 1 100%;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  margin-top: 5px;
+.control input::placeholder {
+  color: #bbb;
 }
 
-/* --- Buttons --- */
-.actions button, .download-btn {
+/* ===== Buttons ===== */
+.actions button,
+.download-btn {
   width: 100%;
   padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
   border: none;
+  border-radius: 10px;
+  color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .actions button {
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: #fff;
+  background: linear-gradient(90deg, #8a2be2, #00eaff);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
 }
 
 .actions button:hover {
-  background: linear-gradient(90deg, #4b00a3, #1a5ddc);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.8);
 }
 
 .download-btn {
-  background: linear-gradient(90deg, #11998e, #38ef7d);
-  color: #fff;
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
   text-decoration: none;
+  display: inline-block;
 }
 
 .download-btn:hover {
-  background: linear-gradient(90deg, #0f7f6f, #2fd47a);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(56, 249, 215, 0.8);
 }
 
-/* --- Footer --- */
+/* ===== Footer ===== */
 .footer {
+  margin-top: 20px;
   font-size: 0.8rem;
-  color: #777777;
-  margin-top: 10px;
+  color: #b0bec5;
 }
 
-/* --- Responsive --- */
+/* ===== Responsive ===== */
 @media (max-width: 480px) {
-  .controls, .effects {
-    flex-direction: column;
+  .card {
+    padding: 20px;
   }
-  .control {
-    flex: 1 1 100%;
+  h1 {
+    font-size: 1.6rem;
+  }
+  .controls {
+    flex-direction: column;
   }
 }

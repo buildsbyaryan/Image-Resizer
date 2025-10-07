@@ -1,79 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Resizer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Resizer 🪄</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🖼 Image Resizer</h1>
-    <p class="subtitle">Resize and edit images easily</p>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Image Resizer 🪄</h1>
+      <p class="subtitle">Resize, style & download your image instantly</p>
 
-    <!-- Upload Section -->
-    <div class="section">
-      <label for="upload" class="upload-label">📁 Upload Image</label>
-      <input type="file" id="upload" accept="image/*" hidden>
+      <div class="upload-section">
+        <label for="fileInput" class="upload-label">📸 Upload Image</label>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="preview-section">
+        <img id="preview" src="" alt="Preview" />
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <label>Width (px)</label>
+          <input type="number" id="widthInput" placeholder="e.g. 500" />
+        </div>
+        <div class="control">
+          <label>Height (px)</label>
+          <input type="number" id="heightInput" placeholder="e.g. 400" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="applyBtn">Apply Changes</button>
+        <a id="downloadLink" class="download-btn" style="display:none;" download="resized-image.png">
+          ⬇️ Download Image
+        </a>
+      </div>
+
+      <footer class="footer">💡 Created by <b>Aryan Sharma</b></footer>
     </div>
-
-    <!-- Preview Section -->
-    <div class="section preview-section">
-      <img id="preview" src="" alt="Preview" style="display:none;">
-    </div>
-
-    <!-- Resize Section -->
-    <div class="section controls">
-      <div class="control">
-        <label for="width">Width (px)</label>
-        <input type="number" id="width" placeholder="Width">
-      </div>
-      <div class="control">
-        <label for="height">Height (px)</label>
-        <input type="number" id="height" placeholder="Height">
-      </div>
-      <div class="control checkbox">
-        <input type="checkbox" id="maintainRatio">
-        <label for="maintainRatio">Maintain Aspect Ratio</label>
-      </div>
-    </div>
-
-    <!-- Effects Section -->
-    <div class="section effects">
-      <div class="control">
-        <label for="rotation">Rotation (°)</label>
-        <input type="number" id="rotation" value="0" min="0" max="360">
-      </div>
-      <div class="control checkbox">
-        <input type="checkbox" id="flipH">
-        <label for="flipH">Flip Horizontal</label>
-      </div>
-      <div class="control checkbox">
-        <input type="checkbox" id="flipV">
-        <label for="flipV">Flip Vertical</label>
-      </div>
-      <div class="control checkbox">
-        <input type="checkbox" id="grayscale">
-        <label for="grayscale">Grayscale</label>
-      </div>
-      <div class="control">
-        <label for="brightness">Brightness</label>
-        <input type="range" id="brightness" min="0" max="200" value="100">
-      </div>
-      <div class="control">
-        <label for="contrast">Contrast</label>
-        <input type="range" id="contrast" min="0" max="200" value="100">
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="section actions">
-      <button id="applyBtn">Apply Changes</button>
-      <a id="downloadLink" class="download-btn" style="display:none;" download="resized-image.png">⬇️ Download</a>
-    </div>
-
-    <!-- Footer -->
-    <p class="footer">Created by Aryan Sharma</p>
   </div>
 
   <script src="script.js"></script>
