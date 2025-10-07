@@ -1,0 +1,145 @@
+/* --- General Reset --- */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe8d6, #ffecd2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+/* --- Sections --- */
+.section {
+  margin-bottom: 20px;
+}
+
+/* --- Upload --- */
+.upload-label {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.upload-label:hover {
+  background: linear-gradient(90deg, #ff5a36, #ffb37b);
+}
+
+/* --- Preview --- */
+.preview-section img {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Controls & Effects --- */
+.controls, .effects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.control {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.control input[type="number"], .control input[type="range"] {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  margin-top: 5px;
+}
+
+.checkbox {
+  flex: 1 1 100%;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+/* --- Buttons --- */
+.actions button, .download-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+.actions button:hover {
+  background: linear-gradient(90deg, #4b00a3, #1a5ddc);
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  color: #fff;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #0f7f6f, #2fd47a);
+}
+
+/* --- Footer --- */
+.footer {
+  font-size: 0.8rem;
+  color: #777777;
+  margin-top: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .controls, .effects {
+    flex-direction: column;
+  }
+  .control {
+    flex: 1 1 100%;
+  }
+}
