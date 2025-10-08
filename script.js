@@ -38,7 +38,7 @@ applyBtn.addEventListener('click', async () => {
   formData.append("height", heightInput.value || uploadedFile.height);
 
   try {
-    const res = await fetch("https://image-resizer-backend-bm2n.onrender.com/resize", {
+    const res = await fetch("https://image-resizer-backend-eta.vercel.app/resize", {
       method: "POST",
       body: formData
     });
